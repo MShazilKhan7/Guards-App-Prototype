@@ -2,6 +2,8 @@ import { router } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import Modal from "react-native-modal";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const BottomModal = () => {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -11,10 +13,16 @@ const BottomModal = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={toggleModal} style={styles.openButton}>
-        <Text style={styles.openButtonText}>Show Menus</Text>
-      </TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <Text
+        onPress={toggleModal}
+        style={{
+          fontSize: 24,
+        }}
+      >
+        <FontAwesome name="bars" size={24} color="black" />
+        {""} Demo App
+      </Text>
 
       <Modal
         isVisible={isModalVisible}
@@ -52,17 +60,17 @@ const BottomModal = () => {
           </TouchableOpacity>
         </View>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    display: "flex",
     width: "100%",
-    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
+    padding: 20,
   },
   openButton: {
     backgroundColor: "#007BFF",
@@ -74,13 +82,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   modal: {
-    justifyContent: "flex-end",
+    flex: 1,
+    height: "100%",
+    justifyContent: "flex-start",
     margin: 0,
   },
   modalContent: {
     backgroundColor: "#fff",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
     padding: 20,
     alignItems: "center",
   },

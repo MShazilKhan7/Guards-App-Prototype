@@ -6,18 +6,11 @@ import BottomModal from "../components/Modal/ModalScreen";
 const Home = () => {
   return (
     <SafeAreaView style={{ flex: 1, alignItems: "center" }}>
-      <BottomModal />
+      {/* <BottomModal /> */}
     </SafeAreaView>
   );
 };
 
 export default Home;
 
-const styles = StyleSheet.create({
-  pill: {
-    borderRadius: 10,
-    backgroundColor: "white",
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-  },
-});
+const styles = StyleSheet.create({});
