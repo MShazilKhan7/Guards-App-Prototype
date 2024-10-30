@@ -19,7 +19,7 @@ const Home = () => {
           }}
         >
           <View style={styles.card}>
-            <AntDesign name="android1" size={24} color="black" />
+            <AntDesign name="android1" size={24} color="#1c2954" />
             <Text
               style={{
                 display: "flex",
@@ -31,10 +31,14 @@ const Home = () => {
             >
               Downloads
             </Text>
-            <Text style={{ fontSize: 36, fontWeight: "bold" }}>11,345</Text>
+            <Text
+              style={{ fontSize: 36, fontWeight: "bold", color: "#2D3142" }}
+            >
+              11,345
+            </Text>
           </View>
           <View style={styles.card}>
-            <AntDesign name="apple1" size={24} color="black" />
+            <AntDesign name="apple1" size={24} color="#1c2954" />
             <Text
               style={{
                 display: "flex",
@@ -46,7 +50,11 @@ const Home = () => {
             >
               Downloads
             </Text>
-            <Text style={{ fontSize: 36, fontWeight: "bold" }}>20,123</Text>
+            <Text
+              style={{ fontSize: 36, fontWeight: "bold", color: "#2D3142" }}
+            >
+              20,123
+            </Text>
           </View>
         </View>
 

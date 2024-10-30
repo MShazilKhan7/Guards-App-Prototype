@@ -26,14 +26,16 @@ const JobChart = () => {
       height={300}
       yAxisSuffix=" jobs"
       chartConfig={{
-        fillShadowGradientOpacity: 1,
-        fillShadowGradient: "#1a2954",
+        fillShadowGradientFrom: "#1C2954", // Bright blue gradient color
+        fillShadowGradientTo: "#1C2954", // Bright blue gradient color
+        fillShadowGradientFromOpacity: 1, // Higher opacity for deeper blue
+        fillShadowGradientToOpacity: 0.6,
         backgroundColor: "#1a2954",
         backgroundGradientFrom: "#E9F1F7",
         backgroundGradientTo: "#E9F1F7",
         decimalPlaces: 0, // No decimal places
         color: (opacity = 1) => `rgba(26, 41, 84, ${opacity})`,
-        labelColor: (opacity = 1) => `black`,
+        labelColor: (opacity = 1) => `#1c2954`,
         style: {
           borderRadius: 16,
           paddingTop: 30,
